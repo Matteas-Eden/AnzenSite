@@ -1,0 +1,26 @@
+{% if messages %}
+{% for m in messages %}
+<div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+    <!-- <img src="/w3images/avatar5.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px"> -->
+    {% if m["time"] == "" %}
+    <span class="w3-right w3-opacity">Just now</span>
+    {% else %}
+    <span class="w3-right w3-opacity">{{m["time"]}} ago</span>
+    {% endif %}
+    {% if m["sender"] == username %}
+    <h4>To {{m["receiver"]}}</h4>
+    {% else %}
+    <h4>From {{m["sender"]}}</h4>
+    {% endif %}
+    <hr class="w3-clear">
+    <p class="broadcastMessage">{{m["message"]}}</p>
+    <button type="button" onClick="likeMessage('{{ m['signature'] }}')" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up w3-margin-right"></i>Like</button> 
+    <button type="button" onClick="blockUser('{{ m['user'] }}')" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-remove w3-margin-right"></i>Block User</button> 
+    <button type="button" onClick="blockMessage('{{ m['signature'] }}')" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-remove w3-margin-right"></i>Block Message</button>
+</div>
+{% endfor %}
+{% else %}
+<div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+    <h4>No messages to display</h4><br>
+</div>
+{% endif %}

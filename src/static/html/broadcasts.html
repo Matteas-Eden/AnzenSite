@@ -1,0 +1,22 @@
+{% if broadcasts %}
+{% for b in broadcasts %}
+<div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+    <!-- <img src="/w3images/avatar5.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px"> -->
+    {% if b["time"] == "" %}
+    <span class="w3-right w3-opacity">Just now</span>
+    {% else %}
+    <span class="w3-right w3-opacity">{{b["time"]}} ago</span>
+    {% endif %}
+    <h4>{{b["user"]}}</h4>
+    <hr class="w3-clear">
+    <p class="broadcastMessage">{{b["message"]}}</p>
+    <button type="button" onClick="likeMessage('{{ b['signature'] }}')" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up w3-margin-right"></i>Like</button> 
+    <button type="button" onClick="blockUser('{{ b['user'] }}')" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-remove w3-margin-right"></i>Block User</button> 
+    <button type="button" onClick="blockMessage('{{ b['signature'] }}')" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-remove w3-margin-right"></i>Block Message</button>
+</div>
+{% endfor %}
+{% else %}
+<div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+    <h4>No broadcasts to display</h4><br>
+</div>
+{% endif %}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link href="static/css/login.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Anzen - Login</title>
+</head>
+<body>
+    <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+            <div class="w3-display-topleft w3-padding-large w3-xlarge">
+            <h2>安全</h2>
+            </div>
+            <div class="blurred-bg-container">
+                    <div class="content">
+                      <div class="blur"></div>
+                    </div>
+            </div>
+            <div id="container" class="display-middle">
+         
+                <form id="formcontent"action="/signin" method="post" enctype="multipart/form-data">
+                    {% if failedLoginAttempt %}
+                    <label>Incorrect username/password</label>
+                    {% endif %}
+                    <label for="username">Username:</label>
+                        
+                    <input type="text" id="username" name="username">
+                        
+                    <label for="password">Password:</label>
+                        
+                    <input type="password" id="password" name="password">
+                        
+                    <div id="lower">
+                            
+                        <input type="submit" value="Login">
+                        
+                    </div><!--/ lower-->
+                    
+                </form>
+                    
+            </div><!--/ container-->
+            <div class=""
+            <div class="w3-display-middle">
+              <!-- <h1 class="w3-jumbo w3-animate-top">COMING SOON</h1> -->
+              <hr class="w3-border-grey" style="margin:auto;width:40%">
+              <!-- <p class="w3-large w3-center">35 days left</p> -->
+            </div>
+          </div>
+</body>
+</html>

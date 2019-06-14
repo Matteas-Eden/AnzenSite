@@ -1,0 +1,13 @@
+loginserver_pubkey
+list_apis
+get_loginserver_record
+report
+load_new_apikey
+add_pubkey
+list_users
+add_privatedata
+rx_privatemessage
+rx_broadcast
+ping
+get_privatedata
+check_pubkey

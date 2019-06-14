@@ -1,0 +1,25 @@
+{% extends "main.html" %}
+{% block title %}Messages{% endblock %}
+{% block content %}
+<div class="w3-col m7">
+    <div class="w3-row-padding">
+        <div class="w3-col m12">
+        <div class="w3-card w3-round w3-white">
+            <div class="w3-container w3-padding">
+            <h6 class="w3-opacity">Send a message</h6>
+            <form id="messageform">
+                <!-- Private Message: <input type="text" id="private_msg"/><br/>
+                Target User: <input type="text" id="target_user"/><br/> -->
+                <input type="text" placeholder="Message" id="private_msg" class="w3-border w3-padding"></input>
+                <input type="text" placeholder="User" id="target_user" class="w3-border w3-padding w3-margin-right"></input>
+                <button type="submit" class="w3-button w3-theme"><i class="fa fa-pencil w3-margin-right"></i>Send</button> 
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script>$("#messages").load("/updateMessages")</script>
+    
+    <!-- End Middle Column -->
+</div>
+{% endblock %}
