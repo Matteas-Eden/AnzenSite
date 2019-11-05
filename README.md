@@ -9,9 +9,11 @@ A simple Python server to interact with the servers created by other students in
 * Sqlite3
 * jinja2
 * PyNaCl
+
 You can check for these by opening up a Python3 terminal and running `import cherrypy`, `import sqlite`, etc. If the given module is not installed, you will see an error. You can then install the appropriate module using `pip install`, e.g. `pip install CherryPy`.
 You can also run `pip install CherryPy PyNaCl Jinja2`. `sqlite` should be included with your Python installation.
 Note: If the above installation does not work, try re-running as `pip3 install CherryPy PyNaCl Jinja2`
+
 4. Once you've checked all the appropriate modules are installed, navigate to the source directory with `cd 2019-Python-mede607/src` and run `python main.py` (this assumes Python3 is your default version, otherwise use `python3`).
 5. You should now see a splash message in console, indicating that you have run the server correctly.
 
